@@ -21,8 +21,8 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/ВАШ_ПОЛЬЗОВАТЕЛЬ/fingers-extension.git
-   cd fingers-extension
+   git clone https://github.com/lexeler/robo_hand.git
+   cd robo_hand
    ```
 
 2. (Рекомендовано) Создайте и активируйте виртуальное окружение:
@@ -57,20 +57,12 @@
 ## Запуск
 
 ```bash
-python fingers_extension.py
+python copy_hand.py
 ```
 
-- Окно с названием **Fingers Extension** откроется в полноэкранном режиме.
+- Окно откроется в полноэкранном режиме.
 - Для выхода нажмите клавишу `q`.
 
-## Структура проекта
-
-```
-fingers-extension/
-├── fingers_extension.py   # основной скрипт
-├── requirements.txt       # зависимости
-└── README.md              # документация
-```
 
 ## Возможные ошибки
 
