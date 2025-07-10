@@ -43,7 +43,7 @@ paper=[180,0,0,0,0]
 scissors=[60,0,0,180,180]
 scissors2=[60,0,0,90,90]
 signs=[rock1,paper,scissors,scissors2,rock2]
-addit_dict={'rock':rock1,'paper':paper,'scissors':scissors}
+addit_dict={'rock':rock1,'paper':paper,'scissors':scissors,'scissors2':scissors,'rock2':rock1}
 
 def get_hand_gesture(angles):
     diffs=[get_diff(i, angles) for i in signs] 
@@ -170,6 +170,7 @@ with mp_hands.Hands(
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,0,0), 2
                     )
             if is_hand_like(extensions) < 0.5 and phase==0:
+                random_sign=None
                 timer=0
                 last_time=time.time()
                 phase=1
@@ -203,7 +204,7 @@ with mp_hands.Hands(
                         ser.write('\n'.join(map(str,random_sign)).encode('utf-8'))
         if won_already and phase==0:
             if diff<1:
-                if not is_random or (random_sign is None):
+                if not is_random and not (random_sign):
                     cv2.putText(
                         frame, "ROBO-HAND WON!", (150, 50),
                         cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 255, 0), 2
