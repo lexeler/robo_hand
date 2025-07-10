@@ -230,7 +230,7 @@ with mp_hands.Hands(
                 )
             else:
                 cv2.putText(
-                    frame, "WTF YOU SHOWED?", (140, 50),
+                    frame, "WHAT DID YOU SHOW?", (100, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0, 0, 255), 2
                 )
         if True:
